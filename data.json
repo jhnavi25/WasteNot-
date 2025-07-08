@@ -2,5 +2,17 @@
     {
         "name": "milk",
         "expiry": "2025-07-25"
+    },
+    {
+        "name": "bread",
+        "expiry": "2025-07-09"
+    },
+    {
+        "name": "bread",
+        "expiry": "2026-07-22"
+    },
+    {
+        "name": "vinegar",
+        "expiry": "2026-07-20"
     }
 ]
