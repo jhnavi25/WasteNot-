@@ -1,7 +1,10 @@
 /* Global */
 body {
     font-family: 'Times New Roman', serif;
-    background-color: #f1f9f1;
+    background-image: url("backgrounf_wastenot.jpg");
+
+
+
     color: #2d2d2d;
     text-align: center;
     margin: 0;
@@ -9,7 +12,7 @@ body {
 }
 
 /* Headings */
-h1 {
+h1 {   
     color: #2e7d32;
     margin-top: 20px;
 }

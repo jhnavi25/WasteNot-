@@ -5,6 +5,20 @@ import matplotlib.pyplot as plt
 import os
 
 app = Flask(__name__)
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+
+        # You can customize these values
+        if username == "user" and password == "1234":
+            return redirect('/')
+        else:
+            return render_template('login.html', error="Invalid username or password.")
+
+    return render_template('login.html')
+
 
 # Home page with form
 @app.route('/')
