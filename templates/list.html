@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Saved Items – WasteNot</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>🥗 All Saved Food Items</h1>
+    <a href="/">+ Add More</a>
+    <ul>
+        {% for item in items %}
+            <li>
+                <strong>{{ item.name }}</strong> – Expires on {{ item.expiry }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
