@@ -1,60 +1,69 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background-color: #f0f8f0;
+    background-color: #f4f9f4;
 }
 
-/* SPLIT LAYOUT FOR LOGIN + REGISTER */
+/* Split container (unchanged) */
 .split-container {
     display: flex;
     height: 100vh;
     width: 100vw;
 }
 
+/* FORM SECTION - improved only this */
 .left-form {
     width: 50%;
-    padding: 60px;
-    background-color: #f8fff8;
+    padding: 80px 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #022902;
 }
 
-.right-image {
-    width: 50%;
-    background-image: url("/static/background-wastenot.jpg"); 
-    background-size: cover;
-    background-position: center;
+.left-form h1 {
+    font-size: 44px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1b9705;
 }
 
-/* FORM ELEMENTS */
-form input[type="text"],
-form input[type="password"],
-form input[type="date"],
-form input[type="number"] {
-    width: 90%;
-    padding: 10px;
-    margin-bottom: 15px;
+.left-form p {
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+form input {
+    width: 100%;
+    padding: 14px;
+    font-size: 15px;
+    margin-bottom: 18px;
+    border-radius: 6px;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    background-color: white;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
+form button {
+    padding: 14px;
+    width: 100%;
     font-size: 16px;
+    background-color: #2bd734;
+    color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
-button:hover {
-    background-color: #45a049;
+form button:hover {
+    background-color: #27642a;
 }
 
+/* Smaller links */
 a {
-    color: #2a7f62;
+    font-size: 14px;
+    color: #2E7D32;
     text-decoration: none;
 }
 
@@ -62,7 +71,10 @@ a:hover {
     text-decoration: underline;
 }
 
-h1 {
-    margin-bottom: 20px;
-    color: #2e4a35;
+/* IMAGE SECTION - keep same */
+.right-image {
+    width: 50%;
+    background-image: url("/static/background-wastenot.jpg");
+    background-size: cover;
+    background-position: center;
 }
