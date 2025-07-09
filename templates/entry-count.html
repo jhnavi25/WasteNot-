@@ -1,16 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>How Many Items?</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <meta charset="UTF-8">
+    <title>Item Count</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #f1f8e9, #e8f5e9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .count-box {
+            background-color: white;
+            padding: 50px 60px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .count-box h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #2E7D32;
+        }
+
+        input[type="number"] {
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            background-color: #2E7D32;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #256629;
+        }
+    </style>
 </head>
 <body>
-    <h1>🍽️ How many food items do you want to add?</h1>
-    <form method="POST">
-        <input type="number" name="count" placeholder="Enter number" required min="1">
-        <br><br>
-        <button type="submit">Next</button>
-    </form>
+    <div class="count-box">
+        <h2>🍽️ How many food items do you want to add?</h2>
+        <form method="POST" action="/entry-count">
+            <input type="number" name="count" min="1" required placeholder="Enter a number">
+            <br>
+            <button type="submit">Continue ➡️</button>
+        </form>
+    </div>
 </body>
 </html>
-

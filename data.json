@@ -1,54 +1,6 @@
 [
     {
-        "name": "milk",
-        "expiry": "2025-07-25"
-    },
-    {
-        "name": "bread",
-        "expiry": "2025-07-09"
-    },
-    {
-        "name": "bread",
-        "expiry": "2026-07-22"
-    },
-    {
-        "name": "vinegar",
-        "expiry": "2026-07-20"
-    },
-    {
-        "name": "bread",
-        "expiry": "2222-02-22"
-    },
-    {
-        "name": "bread",
-        "expiry": "0022-02-22"
-    },
-    {
-        "name": "milk",
-        "expiry": "2222-02-22"
-    },
-    {
         "name": "ginger",
-        "expiry": "1111-11-11"
-    },
-    {
-        "name": "brown brread",
-        "expiry": "2222-02-22"
-    },
-    {
-        "name": "nnn",
-        "expiry": "1111-11-11"
-    },
-    {
-        "name": "ginger",
-        "expiry": "1111-11-11"
-    },
-    {
-        "name": "ginger",
-        "expiry": "1111-11-11"
-    },
-    {
-        "name": "ginger",
-        "expiry": "1111-11-11"
+        "expiry": "2025-09-02"
     }
 ]

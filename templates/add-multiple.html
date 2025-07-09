@@ -1,20 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Add Multiple Items</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <meta charset="UTF-8">
+    <title>Add Food Items</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #e8f5e9, #f1f8e9);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 50px;
+        }
+
+        .form-box {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 900px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2E7D32;
+            margin-bottom: 30px;
+        }
+
+        .item-group {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .item-group input {
+            padding: 12px;
+            font-size: 15px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        .item-group label {
+            font-weight: 600;
+            color: #333;
+            width: 100px;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 12px 24px;
+            font-size: 16px;
+            background-color: #2E7D32;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #256629;
+        }
+    </style>
 </head>
 <body>
-    <h1>🧾 Enter {{ count }} Food Item{{ 's' if count > 1 else '' }}</h1>
-
-    <form method="POST">
-        {% for i in range(count) %}
-            <p><b>Item {{ i+1 }}</b></p>
-            <input type="text" name="name_{{ i }}" placeholder="Food name" required><br>
-            <input type="date" name="expiry_{{ i }}" required><br><br>
-        {% endfor %}
-
-        <button type="submit">Submit All</button>
-    </form>
+    <div class="form-box">
+        <h2>📝 Enter Details for {{ count }} Food Item(s)</h2>
+        <form method="POST" action="">
+            {% for i in range(count) %}
+            <div class="item-group">
+                <label for="name_{{ i }}">Name:</label>
+                <input type="text" name="name_{{ i }}" id="name_{{ i }}" placeholder="e.g. Milk" required>
+                <label for="expiry_{{ i }}">Expiry:</label>
+                <input type="date" name="expiry_{{ i }}" id="expiry_{{ i }}" required>
+            </div>
+            {% endfor %}
+            <button type="submit">✅ Submit All Items</button>
+        </form>
+    </div>
 </body>
 </html>

@@ -1,31 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Welcome to WasteNot</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <style>
+        /* 🎥 Fullscreen Video */
+        #bg-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        /* 🌱 Overlay Hero Content */
         .hero {
+            position: relative;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: linear-gradient(to right, #e8f5e9, #f1f8e9);
+            color: white;
             text-align: center;
             padding: 20px;
+            z-index: 1;
         }
 
         .hero h1 {
             font-size: 48px;
-            color: #2E7D32;
             margin-bottom: 20px;
+            color: white;
         }
 
         .hero p {
             font-size: 20px;
             max-width: 700px;
-            margin-bottom: 40px;
-            color: #333;
+            margin-bottom: 30px;
+            color: #f0f0f0;
         }
 
         .hero a {
@@ -41,9 +56,32 @@
         .hero a:hover {
             background-color: #256629;
         }
+
+        /* 🌍 Language Dropdown */
+        .language {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            color: white;
+            z-index: 2;
+        }
+
+        .language select {
+            padding: 5px 10px;
+            border-radius: 6px;
+            border: none;
+        }
     </style>
 </head>
 <body>
+
+    <!-- 🎥 Background Video -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="{{ url_for('static', filename='homevedio.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- 🌱 Hero Content Over Video -->
     <div class="hero">
         <h1>🌱 WasteNot</h1>
         <p>Track your food items, avoid waste, and contribute to a more sustainable world.</p>
@@ -52,5 +90,17 @@
             <a href="/register">📝 Register</a>
         </div>
     </div>
+
+    <!-- 🌍 Language Dropdown -->
+    <div class="language">
+        <label for="lang">🌍 Language:</label>
+        <select id="lang">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+            <option value="gu">ગુજરાતી</option>
+            <option value="es">Español</option>
+        </select>
+    </div>
+
 </body>
 </html>

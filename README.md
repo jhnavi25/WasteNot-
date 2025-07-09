@@ -36,8 +36,7 @@ git clone https://github.com/jhnavi25/WasteNot.git
 cd WasteNot
 
 # Install dependencies
-pip install flask matplotlib
-
+pip install flask 
 # Run the app
 python app.py
 

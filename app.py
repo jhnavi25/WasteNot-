@@ -68,6 +68,8 @@ def login():
 
     return render_template('login.html')
 
+
+
 # ✅ ASK HOW MANY ITEMS
 @app.route('/entry-count', methods=['GET', 'POST'])
 def entry_count():
@@ -134,9 +136,14 @@ def view_items():
 
     return render_template('list.html', items=data)
 
-# ✅ RUN FLASK APP
+# ✅ DASHBOARD route must be here BEFORE app.run
+@app.route('/dashboard', methods=['GET', 'POST'])
+def dashboard():
+    if request.method == 'POST':
+        return redirect('/entry-count')  # or handle logic here
+    return render_template('entry-count.html')
+
+
+# ✅ RUN FLASK APP (should always be last)
 if __name__ == '__main__':
     app.run(debug=True)
-@app.route('/dashboard')
-def dashboard():
-    return render_template('entry-count.html')
