@@ -2,5 +2,9 @@
     {
         "name": "ginger",
         "expiry": "2025-09-02"
+    },
+    {
+        "name": "milk",
+        "expiry": "2025-12-01"
     }
 ]
