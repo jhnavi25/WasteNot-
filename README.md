@@ -22,20 +22,11 @@
 - **Frontend**: HTML, CSS (custom)
 - **Backend**: Python (Flask)
 - **Storage**: JSON (local)
-- **Visualization**: *(Optional)* Matplotlib
 - **Deployment**: Localhost (Flask server)
 
 ---
 
-## 📷 Screenshots
 
-> *(Optional: Add screenshots to `/static/` folder and update these paths)*
-
-| Homepage | Add Items Page |
-|----------|----------------|
-| ![Home](static/screenshot-home.png) | ![Add](static/screenshot-add.png) |
-
----
 
 ## 🛠️ How to Run
 
@@ -64,7 +55,7 @@ WasteNot/
 ├── static/
 │   ├── style.css
 │   ├── homevedio.mp4
-│   └── (screenshots)
+│   
 │
 ├── templates/
 │   ├── home.html
